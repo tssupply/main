@@ -1,0 +1,329 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_BG" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_BG">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/purple_BG"
+            android:orientation="horizontal"
+            android:fontFamily="@font/lato_light">
+
+            <ImageButton
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/left_circle"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/circle" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="-5dp"
+                android:id="@+id/left_name"
+                android:layout_width="56dp"
+                android:layout_height="66dp"
+                android:text="Anna K."
+                android:textColor="@color/white"
+                android:textAlignment="viewStart" />
+
+            <ImageButton
+                android:layout_marginTop="-5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/left_circles"
+                android:layout_width="56dp"
+                android:layout_height="76dp"
+                android:background="@drawable/circles" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="-2dp"
+                android:id="@+id/left_score"
+                android:layout_width="46dp"
+                android:layout_height="66dp"
+                android:text="579"
+                android:textColor="@color/white"
+                android:textAlignment="viewStart" />
+
+            <ImageButton
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/fire"
+                android:layout_width="56dp"
+                android:layout_height="76dp"
+                android:background="@drawable/fire" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/left_fire"
+                android:layout_width="76dp"
+                android:layout_height="66dp"
+                android:text="66%"
+                android:textColor="@color/white"
+                android:textAlignment="viewStart" />
+            <ImageButton
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="-32dp"
+                android:id="@+id/spacer0"
+                android:layout_width="898dp"
+                android:layout_height="76dp"
+                android:background="@drawable/spacer1" />
+
+            <ImageButton
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="-32dp"
+                android:id="@+id/circles2"
+                android:layout_width="156dp"
+                android:layout_height="76dp"
+                android:background="@drawable/circles2" />
+            <ImageButton
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="-32dp"
+                android:id="@+id/spacer1"
+                android:layout_width="868dp"
+                android:layout_height="76dp"
+                android:background="@drawable/spacer1" />
+            <ImageButton
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="-32dp"
+                android:id="@+id/spacer2"
+                android:layout_width="206dp"
+                android:layout_height="76dp"
+                android:background="@drawable/spacer1" />
+
+            <ImageButton
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="-32dp"
+                android:id="@+id/music"
+                android:layout_width="86dp"
+                android:layout_height="76dp"
+                android:background="@drawable/music" />
+
+            <ImageButton
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="-32dp"
+                android:id="@+id/audio"
+                android:layout_width="94dp"
+                android:layout_height="76dp"
+                android:background="@drawable/audio" />
+
+            <ImageButton
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="-32dp"
+                android:id="@+id/bt1"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:background="@drawable/bt1" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:background="#00ffffff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:background="#00ffffff"
+            android:layout_marginTop="62dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp">
+
+            <VideoView
+                android:background="#00ffffff"
+                android:id="@+id/simpleVideoView"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="1200dp"
+                android:layout_marginTop="-250dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+            <com.example.prototype1java.PathView
+                android:background="#00ffffff"
+                android:layout_marginLeft="515dp"
+                android:layout_marginBottom="180dp"
+                android:layout_marginTop="45dp"
+                android:id="@+id/path"
+                android:layout_width="match_parent"
+                android:layout_height="1300dp" />
+
+
+            <TextView
+                android:background="#00ffffff"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lato_light"
+                android:text="@string/workout_complete"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="52sp" />
+
+            <LinearLayout
+                android:layout_marginTop="-615dp"
+                android:background="#00ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:fontFamily="@font/lato_light">
+
+                <TextView
+                    android:background="#00ffffff"
+                    android:id="@+id/score_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/lato_light"
+                    android:paddingEnd="10dp"
+                    android:text="@string/your_fitness_score_20"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:background="#00ffffff"
+                    android:id="@+id/score_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/lato_light"
+                    android:paddingEnd="10dp"
+                    android:text="@string/your_score_20"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#ffcb49"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:background="#00ffffff"
+                android:id="@+id/textinput_counter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="145dp"
+                android:fontFamily="@font/lato_light"
+                android:text="@string/progressing"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+            <TextView
+                android:background="#00ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="995dp"
+                android:fontFamily="@font/lato_light"
+                android:text="@string/how_do_you_feel_about_your_fitness_journey"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#00ffffff"
+        android:orientation="horizontal"
+        android:layout_width="600dp"
+        android:layout_gravity="center"
+        android:layout_height="135dp"
+        android:layout_marginTop="-360dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp">
+
+        <ImageButton
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/disc"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/discouraged" />
+
+        <ImageButton
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/bored"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/bordes2" />
+
+        <ImageButton
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/neutral"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/neutral" />
+
+        <ImageButton
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/motivated"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/motivated" />
+
+        <ImageButton
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/amazing"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/amazing" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/continue1"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/continue1"
+        android:minWidth="300dp" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:id="@+id/chart1"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:background="@color/purple_BG"/>
+</LinearLayout>
+
