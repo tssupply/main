@@ -35,7 +35,7 @@
                 android:layout_width="155dp"
                 android:layout_height="132dp"
                 android:text="Anna K."
-                android:textSize="33dp"
+                android:textSize="33sp"
                 android:textColor="@color/white"
                 android:textAlignment="viewStart" />
 
@@ -49,7 +49,7 @@
                 android:background="@drawable/circles" />
 
             <TextView
-                android:textSize="33dp"
+                android:textSize="33sp"
                 android:layout_marginTop="52dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginLeft="-2dp"
@@ -70,7 +70,7 @@
                 android:background="@drawable/fire" />
 
             <TextView
-                android:textSize="33dp"
+                android:textSize="33sp"
                 android:layout_marginTop="52dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginLeft="2dp"

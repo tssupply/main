@@ -3,7 +3,6 @@ package com.example.prototype1java;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,14 +24,14 @@ import com.github.mikephil.charting.components.YAxis.YAxisLabelPosition;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
-import com.github.mikephil.charting.highlight.Highlight;
+//import com.github.mikephil.charting.data.Entry;
+//import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+//import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
-import com.github.mikephil.charting.interfaces.datasets.IDataSet;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+//import com.github.mikephil.charting.interfaces.datasets.IDataSet;
+//import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 ///import com.github.mikephil.charting.utils.Fill;
-import com.github.mikephil.charting.utils.MPPointF;
+//import com.github.mikephil.charting.utils.MPPointF;
 
 import java.util.ArrayList;
 

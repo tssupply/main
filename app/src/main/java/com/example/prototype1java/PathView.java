@@ -14,7 +14,6 @@ import android.graphics.PathMeasure;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
-import android.util.Log;
 
 public class PathView extends View
 {
