@@ -1,5 +1,5 @@
 package com.example.prototype1java;
-
+// evaluation prototype code WIP
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         return animator;
     }
 
+    // evaluation prototype code WIP
     private void setUpChart() {
         // this future component's prototype
         chart = findViewById(R.id.chart1);
