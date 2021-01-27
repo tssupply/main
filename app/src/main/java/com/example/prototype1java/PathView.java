@@ -1,5 +1,4 @@
-// WIP
-// evalating library
+// evaluation prototype code WIP
 package com.example.prototype1java;
 
 import android.animation.ArgbEvaluator;
