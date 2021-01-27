@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Prototype1Java</string>
+    <string name="action_settings">Settings</string>
+    <string name="workout_complete">Workout Complete!</string>
+    <string name="your_fitness_score_20">YOUR FITNESS SCORE</string>
+    <string name="your_score_20"> 20</string>
+    <string name="progressing">Progressing</string>
+    <string name="how_do_you_feel_about_your_fitness_journey">How Do You Feel About Your Fitness Journey?</string>
+</resources>
