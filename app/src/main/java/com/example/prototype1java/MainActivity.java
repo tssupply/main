@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_15inchland);
+        setContentView(R.layout.activity_main);
         PathView path_view = findViewById(R.id.path);
         path_view.init();
         SetupVideo();
