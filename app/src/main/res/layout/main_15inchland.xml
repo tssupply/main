@@ -277,7 +277,7 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:background="@drawable/bordes2" />
+            android:background="@drawable/bored2" />
 
         <ImageButton
             android:layout_marginRight="2dp"

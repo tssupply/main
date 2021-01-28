@@ -1,95 +1,73 @@
 // evaluation prototype code WIP
-package com.example.prototype1java;
+package com.example.prototype1java
 
-import android.animation.ArgbEvaluator;
-import android.animation.ObjectAnimator;
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.DashPathEffect;
-import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.PathEffect;
-import android.graphics.PathMeasure;
-import android.graphics.RectF;
-import android.util.AttributeSet;
-import android.view.View;
+import android.animation.ArgbEvaluator
+import android.animation.ObjectAnimator
+import android.content.Context
+import android.graphics.*
+import android.util.AttributeSet
+import android.view.View
+import kotlin.math.max
 
-public class PathView extends View
-{
-    Path path;
-    Paint paint;
-    float length;
-    RectF rect, rect2;
+class PathView : View {
+    private var path: Path? = null
+    private var paint: Paint? = null
+    private var length = 0f
+    private var rect: RectF? = null
+    private var rect2: RectF? = null
 
-    public PathView(Context context)
-    {
-        super(context);
-    }
+    constructor(context: Context?) : super(context)
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
-    public PathView(Context context, AttributeSet attrs)
-    {
-        super(context, attrs);
-    }
-
-    public PathView(Context context, AttributeSet attrs, int defStyleAttr)
-    {
-        super(context, attrs, defStyleAttr);
-    }
-
-    public void init()
-    {
-        paint = new Paint();
-        paint.setColor(Color.TRANSPARENT);
-        paint.setStrokeWidth(4);
-        paint.setStyle(Paint.Style.STROKE);
-
-        path = new Path();
-        path.moveTo(50, 50);
-        path.lineTo(50, 500);
-        path.lineTo(200, 500);
-        path.lineTo(200, 300);
-        path.lineTo(350, 300);
+    fun init() {
+        paint = Paint()
+        paint!!.color = Color.TRANSPARENT
+        paint!!.strokeWidth = 4f
+        paint!!.style = Paint.Style.STROKE
+        path = Path()
+        path!!.moveTo(50f, 50f)
+        path!!.lineTo(50f, 500f)
+        path!!.lineTo(200f, 500f)
+        path!!.lineTo(200f, 300f)
+        path!!.lineTo(350f, 300f)
 
         // Measure the path
-        PathMeasure measure = new PathMeasure(path, false);
-        length = measure.getLength();
+        val measure = PathMeasure(path, false)
+        length = measure.length
 
         //float[] intervals = new float[]{length, length};
-
-        ObjectAnimator.ofFloat(PathView.this, "phase", 1.0f, 0.0f)
+        ObjectAnimator.ofFloat(this@PathView, "phase", 1.0f, 0.0f)
                 .setDuration(8000)
-                .start();
-
-        ObjectAnimator.ofObject(PathView.this, "color", new ArgbEvaluator(), 0xFFFFFF00, 0xFF00FF00, 0xFFFFA500)
+                .start()
+        ObjectAnimator.ofObject(this@PathView, "color", ArgbEvaluator(), -0x100, -0xff0100, -0x5b00)
                 .setDuration(8000)
-                .start();
-
-        rect = new RectF(580,400,950,540);
-        rect2 = new RectF(480,380,1050,600);
+                .start()
+        rect = RectF(580.0f, 400f, 950f, 540f)
+        rect2 = RectF(480f, 380f, 1050f, 600f)
     }
 
-    public void setPhase(float phase)
-    {
-        paint.setPathEffect(createPathEffect(length, phase, 0.0f));
-        invalidate();
-    }
-    public void setColor(int color) {
-        paint.setColor(color);
-        invalidate();
-    }
-    private static PathEffect createPathEffect(float pathLength, float phase, float offset)
-    {
-        return new DashPathEffect(new float[] { pathLength, pathLength },
-                Math.max(phase * pathLength, offset));
+    fun setPhase(phase: Float) {
+        paint!!.pathEffect = createPathEffect(length, phase, 0.0f)
+        invalidate()
     }
 
-    @Override
-    public void onDraw(Canvas c)
-    {
-        super.onDraw(c);
+    fun setColor(color: Int) {
+        paint!!.color = color
+        invalidate()
+    }
+
+    public override fun onDraw(c: Canvas) {
+        super.onDraw(c)
         //c.drawPath(path, paint);
-        c.drawOval(rect,paint);
-        c.drawOval(rect2,paint);
+        c.drawOval(rect!!, paint!!)
+        c.drawOval(rect2!!, paint!!)
+    }
+
+    companion object {
+        private fun createPathEffect(pathLength: Float, phase: Float, offset: Float): PathEffect {
+            return DashPathEffect(floatArrayOf(pathLength, pathLength),
+                    max(phase * pathLength, offset))
+        }
     }
 }
