@@ -236,7 +236,7 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:background="@drawable/discouraged" />
+            android:background="@drawable/discouragedunselected" />
 
         <ImageButton
             android:layout_marginRight="2dp"
@@ -245,7 +245,7 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:background="@drawable/bored2" />
+            android:background="@drawable/boredunselected" />
 
         <ImageButton
             android:layout_marginRight="2dp"
@@ -254,7 +254,7 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:background="@drawable/neutral" />
+            android:background="@drawable/neutralunselected" />
 
         <ImageButton
             android:layout_marginTop="2dp"
@@ -264,7 +264,7 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:background="@drawable/motivated" />
+            android:background="@drawable/motivatedunselected" />
 
         <ImageButton
             android:layout_marginTop="2dp"
@@ -274,7 +274,7 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:background="@drawable/amazing" />
+            android:background="@drawable/amazingunselected" />
     </LinearLayout>
 
     <ImageButton

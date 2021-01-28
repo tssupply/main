@@ -267,9 +267,9 @@
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
             android:id="@+id/disc"
-            android:layout_width="240dp"
+            android:layout_width="280dp"
             android:layout_height="280dp"
-            android:background="@drawable/discouragedselected" />
+            android:background="@drawable/discourage_button" />
 
         <ImageButton
             android:layout_marginRight="2dp"
@@ -277,7 +277,7 @@
             android:id="@+id/bored"
             android:layout_width="280dp"
             android:layout_height="280dp"
-            android:background="@drawable/boredselected" />
+            android:background="@drawable/bored_button" />
 
         <ImageButton
             android:layout_marginRight="2dp"
@@ -285,7 +285,7 @@
             android:id="@+id/neutral"
             android:layout_width="280dp"
             android:layout_height="280dp"
-            android:background="@drawable/neutralelected" />
+            android:background="@drawable/neutral_button" />
 
         <ImageButton
             android:layout_marginTop="2dp"
@@ -294,7 +294,7 @@
             android:id="@+id/motivated"
             android:layout_width="280dp"
             android:layout_height="280dp"
-            android:background="@drawable/motivatedselected" />
+            android:background="@drawable/motivated_button" />
 
         <ImageButton
             android:layout_marginTop="2dp"
@@ -303,7 +303,7 @@
             android:id="@+id/amazing"
             android:layout_width="280dp"
             android:layout_height="280dp"
-            android:background="@drawable/amazingselected" />
+            android:background="@drawable/amazing_button" />
     </LinearLayout>
 
     <ImageButton
