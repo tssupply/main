@@ -17,28 +17,34 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var simpleVideoView: VideoView
     private lateinit var mediaControls: MediaController
-    private lateinit var score: TextView
-    private lateinit var path: PathView
+    private lateinit var scoreView: TextView
+    private lateinit var scorePathView: ScorePathView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_15inchland)
 
-        path = findViewById(R.id.path)
-        path.init()
-
+        setUpPath()
         setupVideo()
+        setupScoreAnimation()
+    }
 
+    private fun setupScoreAnimation() {
         val animator = setUpCounter()
         animator.duration = 6000
         animator.start()
     }
 
+    private fun setUpPath() {
+        scorePathView = findViewById(R.id.path)
+        scorePathView.init()
+    }
+
     private fun setUpCounter(): ValueAnimator {
-        score = findViewById(R.id.textinput_counter)
+        scoreView = findViewById(R.id.textinput_counter)
         val animator = ValueAnimator()
         animator.setObjectValues(0, 579)
-        animator.addUpdateListener { animation: ValueAnimator -> score.text = animation.animatedValue.toString() }
+        animator.addUpdateListener { animation: ValueAnimator -> scoreView.text = animation.animatedValue.toString() }
         animator.setEvaluator(TypeEvaluator { fraction: Float, startValue: Int, endValue: Int -> (startValue + (endValue - startValue) * fraction).roundToInt() } as TypeEvaluator<Int>)
         return animator
     }

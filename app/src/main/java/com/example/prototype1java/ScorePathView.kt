@@ -9,7 +9,7 @@ import android.util.AttributeSet
 import android.view.View
 import kotlin.math.max
 
-class PathView : View {
+class ScorePathView : View {
     private var path: Path? = null
     private var paint: Paint? = null
     private var length = 0f
@@ -22,6 +22,32 @@ class PathView : View {
 
     fun init() {
         paint = Paint()
+        setupLinePath()
+
+        // Measure the path
+        val measure = PathMeasure(path, false)
+        length = measure.length
+
+        annimateScores()
+        setScores()
+    }
+
+    private fun setScores() {
+        //float[] intervals = new float[]{length, length};
+        rect = RectF(580.0f, 400f, 950f, 540f)
+        rect2 = RectF(480f, 380f, 1050f, 600f)
+    }
+
+    private fun annimateScores() {
+        ObjectAnimator.ofFloat(this@ScorePathView, "phase", 1.0f, 0.0f)
+                .setDuration(8000)
+                .start()
+        ObjectAnimator.ofObject(this@ScorePathView, "color", ArgbEvaluator(), -0x100, -0xff0100, -0x5b00)
+                .setDuration(8000)
+                .start()
+    }
+
+    private fun setupLinePath() {
         paint!!.color = Color.TRANSPARENT
         paint!!.strokeWidth = 4f
         paint!!.style = Paint.Style.STROKE
@@ -31,20 +57,6 @@ class PathView : View {
         path!!.lineTo(200f, 500f)
         path!!.lineTo(200f, 300f)
         path!!.lineTo(350f, 300f)
-
-        // Measure the path
-        val measure = PathMeasure(path, false)
-        length = measure.length
-
-        //float[] intervals = new float[]{length, length};
-        ObjectAnimator.ofFloat(this@PathView, "phase", 1.0f, 0.0f)
-                .setDuration(8000)
-                .start()
-        ObjectAnimator.ofObject(this@PathView, "color", ArgbEvaluator(), -0x100, -0xff0100, -0x5b00)
-                .setDuration(8000)
-                .start()
-        rect = RectF(580.0f, 400f, 950f, 540f)
-        rect2 = RectF(480f, 380f, 1050f, 600f)
     }
 
     fun setPhase(phase: Float) {
