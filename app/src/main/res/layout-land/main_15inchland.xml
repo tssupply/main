@@ -262,7 +262,7 @@
         android:layout_marginLeft="75dp"
         android:layout_marginRight="75dp">
 
-        <ImageButton
+        <com.example.prototype1java.ToggleImageButton
             android:layout_marginTop="1dp"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
@@ -271,7 +271,7 @@
             android:layout_height="280dp"
             android:background="@drawable/discourage_button" />
 
-        <ImageButton
+        <com.example.prototype1java.ToggleImageButton
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
             android:id="@+id/bored"
@@ -279,7 +279,7 @@
             android:layout_height="280dp"
             android:background="@drawable/bored_button" />
 
-        <ImageButton
+        <com.example.prototype1java.ToggleImageButton
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
             android:id="@+id/neutral"
@@ -287,7 +287,7 @@
             android:layout_height="280dp"
             android:background="@drawable/neutral_button" />
 
-        <ImageButton
+        <com.example.prototype1java.ToggleImageButton
             android:layout_marginTop="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
@@ -296,7 +296,7 @@
             android:layout_height="280dp"
             android:background="@drawable/motivated_button" />
 
-        <ImageButton
+        <com.example.prototype1java.ToggleImageButton
             android:layout_marginTop="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"

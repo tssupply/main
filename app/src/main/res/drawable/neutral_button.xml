@@ -3,5 +3,8 @@
     <item android:state_focused="true" android:state_pressed="false" android:drawable="@drawable/neutralselected" />
     <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/neutralselected" />
     <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/neutralselected" />
-    <item android:drawable="@drawable/neutralunselected" />
+    <item android:state_focused="true" android:state_pressed="false" android:drawable="@drawable/neutralselected" />
+    <item android:state_selected="false"  android:drawable="@drawable/neutralunselected" />
+    <item android:state_selected="true"  android:drawable="@drawable/neutralselected" />
+    <item android:state_focused="true"  android:drawable="@drawable/neutralselected" />
 </selector>
