@@ -31,27 +31,6 @@ class MainActivity : AppCompatActivity() {
         setupToggles()
     }
 
-    private fun setupToggles() {
-        btoggleButton1 = findViewById(R.id.bored_button)
-        val clickListener = (object : ToggleImageButton.OnCheckedChangeListener {
-            override fun onCheckedChanged(buttonView: ToggleImageButton?, isChecked: Boolean) {
-                if (buttonView != null && isChecked) {
-                    selectedToggle = buttonView.id
-                    if (selectedToggle != R.id.bored_button) (findViewById<ToggleImageButton>(R.id.bored_button)).isChecked = false
-                    if (selectedToggle != R.id.neutral_button) (findViewById<ToggleImageButton>(R.id.neutral_button)).isChecked = false
-                    if (selectedToggle != R.id.amazing_button) (findViewById<ToggleImageButton>(R.id.amazing_button)).isChecked = false
-                    if (selectedToggle != R.id.discourage_button) (findViewById<ToggleImageButton>(R.id.discourage_button)).isChecked = false
-                    if (selectedToggle != R.id.motivated_button) (findViewById<ToggleImageButton>(R.id.motivated_button)).isChecked = false
-                }
-            }
-        })
-        (findViewById<ToggleImageButton>(R.id.bored_button)).onCheckedChangeListener = clickListener
-        (findViewById<ToggleImageButton>(R.id.neutral_button)).onCheckedChangeListener = clickListener
-        (findViewById<ToggleImageButton>(R.id.amazing_button)).onCheckedChangeListener = clickListener
-        (findViewById<ToggleImageButton>(R.id.discourage_button)).onCheckedChangeListener = clickListener
-        (findViewById<ToggleImageButton>(R.id.motivated_button)).onCheckedChangeListener = clickListener
-    }
-
     private fun setupScoreAnimation() {
         val animator = setUpCounter()
         animator.duration = 6000
@@ -84,6 +63,33 @@ class MainActivity : AppCompatActivity() {
         simpleVideoView.setOnCompletionListener { mp: MediaPlayer? ->  // reserved
         }
         simpleVideoView.setOnErrorListener{ mp: MediaPlayer?, what: Int, extra: Int -> false }
+    }
+
+    private fun setupToggles() {
+        btoggleButton1 = findViewById(R.id.bored_button)
+        val boredButton = findViewById<ToggleImageButton>(R.id.bored_button)
+        val neutralButton = findViewById<ToggleImageButton>(R.id.neutral_button)
+        val amazingButton = findViewById<ToggleImageButton>(R.id.amazing_button)
+        val discourageButton = findViewById<ToggleImageButton>(R.id.discourage_button)
+        val motivatedButton = findViewById<ToggleImageButton>(R.id.motivated_button)
+
+        val clickListener = (object : ToggleImageButton.OnCheckedChangeListener {
+            override fun onCheckedChanged(buttonView: ToggleImageButton?, isChecked: Boolean) {
+                if (buttonView != null && isChecked) {
+                    selectedToggle = buttonView.id
+                    if (selectedToggle != boredButton.id) boredButton.isChecked = false
+                    if (selectedToggle != neutralButton.id) neutralButton.isChecked = false
+                    if (selectedToggle != amazingButton.id) amazingButton.isChecked = false
+                    if (selectedToggle != discourageButton.id) discourageButton.isChecked = false
+                    if (selectedToggle != motivatedButton.id) motivatedButton.isChecked = false
+                }
+            }
+        })
+        boredButton.onCheckedChangeListener = clickListener
+        neutralButton.onCheckedChangeListener = clickListener
+        amazingButton.onCheckedChangeListener = clickListener
+        discourageButton.onCheckedChangeListener = clickListener
+        motivatedButton.onCheckedChangeListener = clickListener
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -13,67 +13,77 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="112dp"
             android:background="@color/purple_BG"
             android:orientation="horizontal"
             android:fontFamily="@font/lato_light">
-
             <ImageButton
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="3dp"
                 android:layout_marginRight="2dp"
-                android:layout_marginLeft="2dp"
+                android:layout_marginLeft="0dp"
+                android:id="@+id/spacer5"
+                android:layout_width="28dp"
+                android:layout_height="96dp"
+                android:background="@drawable/spacer1" />
+            <ImageButton
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
                 android:id="@+id/left_circle"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:background="@drawable/circle" />
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="@drawable/iconuser" />
 
-            <TextView
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginLeft="-5dp"
-                android:id="@+id/left_name"
-                android:layout_width="56dp"
-                android:layout_height="66dp"
-                android:text="Anna K."
-                android:textColor="@color/white"
-                android:textAlignment="viewStart" />
+            5            <TextView
+            android:layout_marginTop="37dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/left_name"
+            android:layout_width="155dp"
+            android:layout_height="132dp"
+            android:text="Anna K."
+            android:textSize="33sp"
+            android:textColor="@color/white"
+            android:textAlignment="viewStart" />
 
             <ImageButton
-                android:layout_marginTop="-5dp"
+                android:layout_marginTop="22dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginLeft="2dp"
                 android:id="@+id/left_circles"
-                android:layout_width="56dp"
+                android:layout_width="76dp"
                 android:layout_height="76dp"
-                android:background="@drawable/circles" />
+                android:background="@drawable/iconfs" />
 
             <TextView
-                android:layout_marginTop="25dp"
+                android:textSize="33sp"
+                android:layout_marginTop="40dp"
                 android:layout_marginRight="2dp"
-                android:layout_marginLeft="-2dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/left_score"
-                android:layout_width="46dp"
-                android:layout_height="66dp"
+                android:layout_width="118dp"
+                android:layout_height="122dp"
                 android:text="579"
                 android:textColor="@color/white"
                 android:textAlignment="viewStart" />
 
             <ImageButton
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginLeft="2dp"
                 android:id="@+id/fire"
-                android:layout_width="56dp"
-                android:layout_height="76dp"
-                android:background="@drawable/fire" />
+                android:layout_width="63dp"
+                android:layout_height="78dp"
+                android:background="@drawable/iconburn" />
 
             <TextView
-                android:layout_marginTop="25dp"
+                android:textSize="33sp"
+                android:layout_marginTop="43dp"
                 android:layout_marginRight="2dp"
-                android:layout_marginLeft="2dp"
+                android:layout_marginLeft="6dp"
                 android:id="@+id/left_fire"
-                android:layout_width="76dp"
-                android:layout_height="66dp"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
                 android:text="66%"
                 android:textColor="@color/white"
                 android:textAlignment="viewStart" />
@@ -82,8 +92,8 @@
                 android:layout_marginRight="2dp"
                 android:layout_marginLeft="-32dp"
                 android:id="@+id/spacer0"
-                android:layout_width="898dp"
-                android:layout_height="76dp"
+                android:layout_width="88dp"
+                android:layout_height="96dp"
                 android:background="@drawable/spacer1" />
 
             <ImageButton
@@ -91,65 +101,65 @@
                 android:layout_marginRight="2dp"
                 android:layout_marginLeft="-32dp"
                 android:id="@+id/circles2"
-                android:layout_width="156dp"
-                android:layout_height="76dp"
-                android:background="@drawable/circles2" />
+                android:layout_width="256dp"
+                android:layout_height="96dp"
+                android:background="@drawable/iconmax" />
             <ImageButton
                 android:layout_marginTop="3dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginLeft="-32dp"
                 android:id="@+id/spacer1"
-                android:layout_width="868dp"
-                android:layout_height="76dp"
+                android:layout_width="78dp"
+                android:layout_height="96dp"
                 android:background="@drawable/spacer1" />
             <ImageButton
                 android:layout_marginTop="3dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginLeft="-32dp"
                 android:id="@+id/spacer2"
-                android:layout_width="206dp"
-                android:layout_height="76dp"
+                android:layout_width="246dp"
+                android:layout_height="96dp"
                 android:background="@drawable/spacer1" />
 
             <ImageButton
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="12dp"
                 android:layout_marginLeft="-32dp"
                 android:id="@+id/music"
                 android:layout_width="86dp"
-                android:layout_height="76dp"
-                android:background="@drawable/music" />
+                android:layout_height="56dp"
+                android:background="@drawable/iconmusic" />
 
             <ImageButton
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="-33dp"
                 android:layout_marginRight="2dp"
-                android:layout_marginLeft="-32dp"
+                android:layout_marginLeft="-3dp"
                 android:id="@+id/audio"
-                android:layout_width="94dp"
-                android:layout_height="76dp"
+                android:layout_width="196dp"
+                android:layout_height="186dp"
                 android:background="@drawable/audio" />
 
             <ImageButton
-                android:layout_marginTop="3dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginLeft="-32dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="-100dp"
+                android:layout_marginLeft="2dp"
                 android:id="@+id/bt1"
-                android:layout_width="76dp"
-                android:layout_height="76dp"
-                android:background="@drawable/bt1" />
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@drawable/iconbt" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:background="#00ffffff"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent" >
 
         <FrameLayout
             android:background="#00ffffff"
             android:layout_marginTop="62dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="0dp">
 
             <VideoView
@@ -157,16 +167,16 @@
                 android:id="@+id/simpleVideoView"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="1200dp"
-                android:layout_marginTop="-250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-650dp"
                 android:focusable="false"
                 android:focusableInTouchMode="false" />
 
             <com.example.prototype1java.ScorePathView
                 android:background="#00ffffff"
-                android:layout_marginLeft="515dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginBottom="180dp"
-                android:layout_marginTop="45dp"
+                android:layout_marginTop="95dp"
                 android:id="@+id/path"
                 android:layout_width="match_parent"
                 android:layout_height="1300dp" />
@@ -177,15 +187,15 @@
                 android:layout_width="match_parent"
                 android:gravity="center"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/lato_light"
                 android:text="@string/workout_complete"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="102sp" />
+                android:textSize="82sp" />
 
             <LinearLayout
-                android:layout_marginTop="-615dp"
+                android:layout_marginTop="-1015dp"
                 android:background="#00ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -198,28 +208,28 @@
                     android:background="#00ffffff"
                     android:id="@+id/score_counter"
                     android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/lato_light"
                     android:paddingEnd="10dp"
                     android:text="@string/your_fitness_score_20"
                     android:textAlignment="viewEnd"
                     android:textColor="@color/white"
-                    android:textSize="13sp"
+                    android:textSize="33sp"
                     android:textStyle="bold"/>
 
                 <TextView
                     android:background="#00ffffff"
                     android:id="@+id/score_count"
                     android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/lato_light"
-                    android:paddingEnd="10dp"
+                    android:paddingEnd="30dp"
                     android:text="@string/your_score_20"
                     android:textAlignment="viewEnd"
                     android:textColor="#ffcb49"
-                    android:textSize="13sp"
+                    android:textSize="33sp"
                     android:textStyle="bold"/>
             </LinearLayout>
 
@@ -229,94 +239,88 @@
                 android:id="@+id/textinput_counter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="145dp"
+                android:layout_marginTop="225dp"
                 android:fontFamily="@font/lato_light"
                 android:text="@string/progressing"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="45sp" />
+                android:textSize="65sp" />
             <TextView
                 android:background="#00ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="995dp"
+                android:layout_marginTop="1265dp"
                 android:fontFamily="@font/lato_light"
                 android:text="@string/how_do_you_feel_about_your_fitness_journey"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="44sp" />
         </FrameLayout>
-
 
     </LinearLayout>
 
     <LinearLayout
         android:background="#00ffffff"
         android:orientation="horizontal"
-        android:layout_width="600dp"
+        android:layout_width="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="135dp"
-        android:layout_marginTop="-360dp"
+        android:layout_height="330dp"
+        android:layout_marginTop="-850dp"
         android:layout_marginLeft="75dp"
         android:layout_marginRight="75dp">
 
-        <ImageButton
+        <com.example.prototype1java.ToggleImageButton
+            android:id="@+id/discourage_button"
             android:layout_marginTop="1dp"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:id="@+id/disc"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:background="@drawable/discouragedunselected" />
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:background="@drawable/discourage_button" />
 
-        <ImageButton
+        <com.example.prototype1java.ToggleImageButton
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:id="@+id/bored"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:background="@drawable/boredunselected" />
+            android:id="@+id/bored_button"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:background="@drawable/bored_button" />
 
-        <ImageButton
+        <com.example.prototype1java.ToggleImageButton
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:id="@+id/neutral"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:background="@drawable/neutralselected" />
+            android:id="@+id/neutral_button"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:background="@drawable/neutral_button" />
 
-        <ImageButton
+        <com.example.prototype1java.ToggleImageButton
             android:layout_marginTop="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:id="@+id/motivated"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:background="@drawable/motivatedselected" />
+            android:id="@+id/motivated_button"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:background="@drawable/motivated_button" />
 
-        <ImageButton
+        <com.example.prototype1java.ToggleImageButton
             android:layout_marginTop="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:id="@+id/amazing"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:background="@drawable/amazingselected" />
+            android:id="@+id/amazing_button"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:background="@drawable/amazing_button" />
     </LinearLayout>
 
     <ImageButton
         android:id="@+id/continue1"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="400dp"
+        android:layout_height="110dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/continue1"
-        android:minWidth="300dp" />
+        android:layout_marginTop="120dp"
+        android:background="@drawable/btncontinue"
+        android:minWidth="350dp" />
 
     <com.github.mikephil.charting.charts.BarChart
         android:visibility="gone"
