@@ -197,7 +197,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp">
             <VideoView
-                android:id="@+id/simpleVideoView"
+                android:id="@+id/videoView"
                 android:layout_width="match_parent"
                 android:layout_height="550dp"
                 android:layout_marginTop="0dp"
@@ -289,7 +289,7 @@
     <com.github.mikephil.charting.charts.BarChart
 
         android:layout_marginTop="5dp"
-            android:id="@+id/chart1"
+            android:id="@+id/my_journey_chart"
             android:layout_width="fill_parent"
             android:layout_height="280dp"
             android:background="@color/purple_BG"/>

@@ -21,15 +21,15 @@ class ScorePathView : View {
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
     fun init() {
+        setScores()
         paint = Paint()
         setupLinePath()
 
-        // Measure the path
         val measure = PathMeasure(path, false)
         length = measure.length
 
         annimateScores()
-        setScores()
+
     }
 
     private fun setScores() {
@@ -72,8 +72,8 @@ class ScorePathView : View {
     public override fun onDraw(c: Canvas) {
         super.onDraw(c)
         //c.drawPath(path, paint);
-        c.drawOval(rect!!, paint!!)
-        c.drawOval(rect2!!, paint!!)
+        if(rect != null) c.drawOval(rect!!, paint!!)
+        if(rect2 != null) c.drawOval(rect2!!, paint!!)
     }
 
     companion object {

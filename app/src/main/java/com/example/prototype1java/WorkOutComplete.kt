@@ -15,35 +15,39 @@ import kotlin.math.roundToInt
 
 class WorkOutComplete : AppCompatActivity() {
 
-    private lateinit var simpleVideoView: VideoView
+    private lateinit var videoView: VideoView
     private lateinit var mediaControls: MediaController
     private lateinit var scoreView: TextView
     private lateinit var scorePathView: ScorePathView
-    private lateinit var btoggleButton1: ToggleImageButton
+    private lateinit var toggleButton1: ToggleImageButton
     private var selectedToggle = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.workout_complete)
 
-        setUpPath()
-        setupVideo()
-        setupScoreAnimation()
-        setupToggles()
+        configureScorePath()
+        configureBackgroundVideo()
+        confiureScoreAnimation()
+        configureFeedbackToggleButtonss()
+        configureNavigationToMyJourney()
+    }
+
+    private fun configureNavigationToMyJourney() {
         val button: ImageButton = findViewById(R.id.continue1)
-        button.setOnClickListener{
+        button.setOnClickListener {
             val intent = Intent(this, MyJourneyScore::class.java)
             startActivity(intent)
         }
     }
 
-    private fun setupScoreAnimation() {
+    private fun confiureScoreAnimation() {
         val animator = setUpCounter()
-        animator.duration = 6000
+        animator.duration = animationDuration
         animator.start()
     }
 
-    private fun setUpPath() {
+    private fun configureScorePath() {
         scorePathView = findViewById(R.id.path)
         scorePathView.init()
     }
@@ -58,21 +62,21 @@ class WorkOutComplete : AppCompatActivity() {
     }
 
     // evaluation prototype code WIP
-    private fun setupVideo() {
-        simpleVideoView = findViewById(R.id.simpleVideoView)
-        simpleVideoView.setOnPreparedListener{ mp: MediaPlayer -> mp.isLooping = true }
+    private fun configureBackgroundVideo() {
+        videoView = findViewById(R.id.videoView)
+        videoView.setOnPreparedListener{ mp: MediaPlayer -> mp.isLooping = true }
         mediaControls = MediaController(this@WorkOutComplete)
-        mediaControls.setAnchorView(simpleVideoView)
-        simpleVideoView.setMediaController(mediaControls)
-        simpleVideoView.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.w1))
-        simpleVideoView.start()
-        simpleVideoView.setOnCompletionListener { mp: MediaPlayer? ->  // reserved
+        mediaControls.setAnchorView(videoView)
+        videoView.setMediaController(mediaControls)
+        videoView.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.w1))
+        videoView.start()
+        videoView.setOnCompletionListener { mp: MediaPlayer? ->  // reserved
         }
-        simpleVideoView.setOnErrorListener{ mp: MediaPlayer?, what: Int, extra: Int -> false }
+        videoView.setOnErrorListener{ mp: MediaPlayer?, what: Int, extra: Int -> false }
     }
 
-    private fun setupToggles() {
-        btoggleButton1 = findViewById(R.id.bored_button)
+    private fun configureFeedbackToggleButtonss() {
+        toggleButton1 = findViewById(R.id.bored_button)
         val boredButton = findViewById<ToggleImageButton>(R.id.bored_button)
         val neutralButton = findViewById<ToggleImageButton>(R.id.neutral_button)
         val amazingButton = findViewById<ToggleImageButton>(R.id.amazing_button)
@@ -108,5 +112,9 @@ class WorkOutComplete : AppCompatActivity() {
         return if (id == R.id.action_settings) {
             true
         } else super.onOptionsItemSelected(item)
+    }
+
+    companion object{
+     const val animationDuration = 6000L
     }
 }
