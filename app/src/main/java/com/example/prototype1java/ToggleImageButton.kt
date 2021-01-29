@@ -1,68 +1,47 @@
-package com.example.prototype1java;
+package com.example.prototype1java
 
-import android.content.Context;
-import android.content.res.TypedArray;
-import android.util.AttributeSet;
-import android.widget.Checkable;
-import android.widget.ImageButton;
+import android.content.Context
+import android.util.AttributeSet
+import android.widget.Checkable
+import android.widget.ImageButton
 
-public class ToggleImageButton extends ImageButton implements Checkable {
-    private OnCheckedChangeListener onCheckedChangeListener;
+class ToggleImageButton : androidx.appcompat.widget.AppCompatImageButton, Checkable {
+    var onCheckedChangeListener: OnCheckedChangeListener? = null
 
-    public ToggleImageButton(Context context) {
-        super(context);
+    constructor(context: Context?) : super(context!!)
+    constructor(context: Context?, attrs: AttributeSet) : super(context!!, attrs) {
+        setChecked(attrs)
     }
 
-    public ToggleImageButton(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        setChecked(attrs);
+    constructor(context: Context?, attrs: AttributeSet, defStyle: Int) : super(context!!, attrs, defStyle) {
+        setChecked(attrs)
     }
 
-    public ToggleImageButton(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-        setChecked(attrs);
+    private fun setChecked(attrs: AttributeSet) {
+        val attributeSet = context.obtainStyledAttributes(attrs, R.styleable.ToggleImageButton)
+        isChecked = attributeSet.getBoolean(R.styleable.ToggleImageButton_android_checked, false)
+        attributeSet.recycle()
     }
 
-    private void setChecked(AttributeSet attrs) {
-        TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.ToggleImageButton);
-        setChecked(a.getBoolean(R.styleable.ToggleImageButton_android_checked, false));
-        a.recycle();
+    override fun isChecked(): Boolean {
+        return isSelected
     }
 
-    @Override
-    public boolean isChecked() {
-        return isSelected();
+    override fun setChecked(checked: Boolean) {
+        isSelected = checked
+        onCheckedChangeListener?.onCheckedChanged(this, checked)
     }
 
-    @Override
-    public void setChecked(boolean checked) {
-        setSelected(checked);
-
-        if (onCheckedChangeListener != null) {
-            onCheckedChangeListener.onCheckedChanged(this, checked);
-        }
+    override fun toggle() {
+        isChecked = !isChecked
     }
 
-    @Override
-    public void toggle() {
-        setChecked(!isChecked());
+    override fun performClick(): Boolean {
+        toggle()
+        return super.performClick()
     }
 
-    @Override
-    public boolean performClick() {
-        toggle();
-        return super.performClick();
-    }
-
-    public OnCheckedChangeListener getOnCheckedChangeListener() {
-        return onCheckedChangeListener;
-    }
-
-    public void setOnCheckedChangeListener(OnCheckedChangeListener onCheckedChangeListener) {
-        this.onCheckedChangeListener = onCheckedChangeListener;
-    }
-
-    public static interface OnCheckedChangeListener {
-        public void onCheckedChanged(ToggleImageButton buttonView, boolean isChecked);
+    interface OnCheckedChangeListener {
+        fun onCheckedChanged(buttonView: ToggleImageButton?, isChecked: Boolean)
     }
 }

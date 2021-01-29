@@ -263,10 +263,10 @@
         android:layout_marginRight="75dp">
 
         <com.example.prototype1java.ToggleImageButton
+            android:id="@+id/discourage_button"
             android:layout_marginTop="1dp"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:id="@+id/disc"
             android:layout_width="280dp"
             android:layout_height="280dp"
             android:background="@drawable/discourage_button" />
@@ -274,7 +274,7 @@
         <com.example.prototype1java.ToggleImageButton
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:id="@+id/bored"
+            android:id="@+id/bored_button"
             android:layout_width="280dp"
             android:layout_height="280dp"
             android:background="@drawable/bored_button" />
@@ -282,7 +282,7 @@
         <com.example.prototype1java.ToggleImageButton
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:id="@+id/neutral"
+            android:id="@+id/neutral_button"
             android:layout_width="280dp"
             android:layout_height="280dp"
             android:background="@drawable/neutral_button" />
@@ -291,7 +291,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:id="@+id/motivated"
+            android:id="@+id/motivated_button"
             android:layout_width="280dp"
             android:layout_height="280dp"
             android:background="@drawable/motivated_button" />
@@ -300,7 +300,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:id="@+id/amazing"
+            android:id="@+id/amazing_button"
             android:layout_width="280dp"
             android:layout_height="280dp"
             android:background="@drawable/amazing_button" />

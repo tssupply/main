@@ -7,11 +7,10 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.MediaController
-import android.widget.TextView
-import android.widget.VideoView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.roundToInt
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +18,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mediaControls: MediaController
     private lateinit var scoreView: TextView
     private lateinit var scorePathView: ScorePathView
+    private lateinit var btoggleButton1: ToggleImageButton
+    private var selectedToggle = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,28 @@ class MainActivity : AppCompatActivity() {
         setUpPath()
         setupVideo()
         setupScoreAnimation()
+        setupToggles()
+    }
+
+    private fun setupToggles() {
+        btoggleButton1 = findViewById(R.id.bored_button)
+        val clickListener = (object : ToggleImageButton.OnCheckedChangeListener {
+            override fun onCheckedChanged(buttonView: ToggleImageButton?, isChecked: Boolean) {
+                if (buttonView != null && isChecked) {
+                    selectedToggle = buttonView.id
+                    if (selectedToggle != R.id.bored_button) (findViewById<ToggleImageButton>(R.id.bored_button)).isChecked = false
+                    if (selectedToggle != R.id.neutral_button) (findViewById<ToggleImageButton>(R.id.neutral_button)).isChecked = false
+                    if (selectedToggle != R.id.amazing_button) (findViewById<ToggleImageButton>(R.id.amazing_button)).isChecked = false
+                    if (selectedToggle != R.id.discourage_button) (findViewById<ToggleImageButton>(R.id.discourage_button)).isChecked = false
+                    if (selectedToggle != R.id.motivated_button) (findViewById<ToggleImageButton>(R.id.motivated_button)).isChecked = false
+                }
+            }
+        })
+        (findViewById<ToggleImageButton>(R.id.bored_button)).onCheckedChangeListener = clickListener
+        (findViewById<ToggleImageButton>(R.id.neutral_button)).onCheckedChangeListener = clickListener
+        (findViewById<ToggleImageButton>(R.id.amazing_button)).onCheckedChangeListener = clickListener
+        (findViewById<ToggleImageButton>(R.id.discourage_button)).onCheckedChangeListener = clickListener
+        (findViewById<ToggleImageButton>(R.id.motivated_button)).onCheckedChangeListener = clickListener
     }
 
     private fun setupScoreAnimation() {
