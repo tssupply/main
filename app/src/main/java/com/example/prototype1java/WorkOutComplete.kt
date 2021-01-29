@@ -2,6 +2,7 @@ package com.example.prototype1java
 
 import android.animation.TypeEvaluator
 import android.animation.ValueAnimator
+import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
@@ -12,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.roundToInt
 
 
-class MainActivity : AppCompatActivity() {
+class WorkOutComplete : AppCompatActivity() {
 
     private lateinit var simpleVideoView: VideoView
     private lateinit var mediaControls: MediaController
@@ -23,12 +24,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_15inchland)
+        setContentView(R.layout.workout_complete)
 
         setUpPath()
         setupVideo()
         setupScoreAnimation()
         setupToggles()
+        val button: ImageButton = findViewById(R.id.continue1)
+        button.setOnClickListener{
+            val intent = Intent(this, MyJourneyScore::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupScoreAnimation() {
@@ -55,7 +61,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupVideo() {
         simpleVideoView = findViewById(R.id.simpleVideoView)
         simpleVideoView.setOnPreparedListener{ mp: MediaPlayer -> mp.isLooping = true }
-        mediaControls = MediaController(this@MainActivity)
+        mediaControls = MediaController(this@WorkOutComplete)
         mediaControls.setAnchorView(simpleVideoView)
         simpleVideoView.setMediaController(mediaControls)
         simpleVideoView.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.w1))
