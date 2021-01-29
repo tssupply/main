@@ -81,8 +81,7 @@ class MainActivity : AppCompatActivity() {
         simpleVideoView.setMediaController(mediaControls)
         simpleVideoView.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.w1))
         simpleVideoView.start()
-        simpleVideoView.setOnCompletionListener { mp: MediaPlayer? ->
-            // reserved
+        simpleVideoView.setOnCompletionListener { mp: MediaPlayer? ->  // reserved
         }
         simpleVideoView.setOnErrorListener{ mp: MediaPlayer?, what: Int, extra: Int -> false }
     }
