@@ -12,7 +12,6 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.roundToInt
 
-
 class WorkOutComplete : AppCompatActivity() {
 
     private lateinit var videoView: VideoView

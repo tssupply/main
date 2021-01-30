@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato_light"
-            android:text="Your Fitness Journey"
+            android:text="@string/your_fitness_journey"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="52sp" />
