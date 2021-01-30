@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/purple_BG"
+    android:orientation="horizontal"
+    android:fontFamily="@font/lato_light"
+    tools:showIn="@layout/workout_complete">
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="0dp"
+        android:id="@+id/spacer5"
+        android:layout_width="7dp"
+        android:layout_height="28dp"
+        android:background="@drawable/spacer1" />
+
+    <ImageButton
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:id="@+id/left_circle"
+        android:layout_width="27dp"
+        android:layout_height="28dp"
+        android:background="@drawable/iconuser" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/left_name"
+        android:layout_width="75dp"
+        android:layout_height="32dp"
+        android:text="Anna K."
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        android:textAlignment="viewStart" />
+
+    <ImageButton
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/left_circles"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="@drawable/iconfs" />
+
+    <TextView
+        android:textSize="13sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/left_score"
+        android:layout_width="59dp"
+        android:layout_height="61dp"
+        android:text="579"
+        android:textColor="@color/white"
+        android:textAlignment="viewStart" />
+
+    <ImageButton
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/fire"
+        android:layout_width="24dp"
+        android:layout_height="26dp"
+        android:background="@drawable/iconburn" />
+
+    <TextView
+        android:textSize="13sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="6dp"
+        android:id="@+id/left_fire"
+        android:layout_width="34dp"
+        android:layout_height="24dp"
+        android:text="66%"
+        android:textColor="@color/white"
+        android:textAlignment="viewStart" />
+
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="222dp"
+        android:id="@+id/circles2"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:background="@drawable/iconmax" />
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="132dp"
+        android:id="@+id/spacer1"
+        android:layout_width="205dp"
+        android:layout_height="48dp"
+        android:background="@drawable/spacer1" />
+
+
+    <ImageButton
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="0dp"
+        android:id="@+id/music"
+        android:layout_width="34dp"
+        android:layout_height="24dp"
+        android:background="@drawable/iconmusic" />
+
+    <ImageButton
+        android:layout_marginTop="-20dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="-9dp"
+        android:id="@+id/audio"
+        android:layout_width="96dp"
+        android:layout_height="92dp"
+        android:background="@drawable/audio" />
+
+    <ImageButton
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="00dp"
+        android:layout_marginLeft="-2dp"
+        android:id="@+id/bt1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/iconbt" />
+</LinearLayout>

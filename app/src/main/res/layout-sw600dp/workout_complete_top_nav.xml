@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="112dp"
+    android:background="@color/purple_BG"
+    android:orientation="horizontal"
+    android:fontFamily="@font/lato_light"
+    tools:showIn="@layout/workout_complete">
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="0dp"
+        android:id="@+id/spacer5"
+        android:layout_width="28dp"
+        android:layout_height="96dp"
+        android:background="@drawable/spacer1" />
+
+    <ImageButton
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:id="@+id/left_circle"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="@drawable/iconuser" />
+
+    5
+
+    <TextView
+        android:layout_marginTop="37dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/left_name"
+        android:layout_width="155dp"
+        android:layout_height="132dp"
+        android:text="Anna K."
+        android:textSize="33sp"
+        android:textColor="@color/white"
+        android:textAlignment="viewStart" />
+
+    <ImageButton
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/left_circles"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:background="@drawable/iconfs" />
+
+    <TextView
+        android:textSize="33sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/left_score"
+        android:layout_width="118dp"
+        android:layout_height="122dp"
+        android:text="579"
+        android:textColor="@color/white"
+        android:textAlignment="viewStart" />
+
+    <ImageButton
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/fire"
+        android:layout_width="63dp"
+        android:layout_height="78dp"
+        android:background="@drawable/iconburn" />
+
+    <TextView
+        android:textSize="33sp"
+        android:layout_marginTop="43dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="6dp"
+        android:id="@+id/left_fire"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:text="66%"
+        android:textColor="@color/white"
+        android:textAlignment="viewStart" />
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="-32dp"
+        android:id="@+id/spacer0"
+        android:layout_width="518dp"
+        android:layout_height="96dp"
+        android:background="@drawable/spacer1" />
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="-32dp"
+        android:id="@+id/circles2"
+        android:layout_width="256dp"
+        android:layout_height="96dp"
+        android:background="@drawable/iconmax" />
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="-32dp"
+        android:id="@+id/spacer1"
+        android:layout_width="568dp"
+        android:layout_height="96dp"
+        android:background="@drawable/spacer1" />
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="-32dp"
+        android:id="@+id/spacer2"
+        android:layout_width="246dp"
+        android:layout_height="96dp"
+        android:background="@drawable/spacer1" />
+
+    <ImageButton
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="-32dp"
+        android:id="@+id/music"
+        android:layout_width="86dp"
+        android:layout_height="56dp"
+        android:background="@drawable/iconmusic" />
+
+    <ImageButton
+        android:layout_marginTop="-33dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="-3dp"
+        android:id="@+id/audio"
+        android:layout_width="196dp"
+        android:layout_height="186dp"
+        android:background="@drawable/audio" />
+
+    <ImageButton
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="-100dp"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/bt1"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:background="@drawable/iconbt" />
+</LinearLayout>

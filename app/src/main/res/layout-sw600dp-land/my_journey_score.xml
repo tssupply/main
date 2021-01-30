@@ -1,0 +1,73 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_BG" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_BG">
+
+        <include layout="@layout/workout_complete_top_nav" />
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/top1" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_BG">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_light"
+            android:text="@string/your_fitness_journey"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="52sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/top2" />
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/top4" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:layout_marginTop="5dp"
+        android:id="@+id/my_journey_chart"
+        android:layout_width="fill_parent"
+        android:layout_height="580dp"
+        android:background="@color/purple_BG"/>
+
+    <ImageButton
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top3" />
+</LinearLayout>
+

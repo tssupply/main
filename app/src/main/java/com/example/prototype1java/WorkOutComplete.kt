@@ -69,7 +69,7 @@ class WorkOutComplete : AppCompatActivity() {
         videoView.setOnPreparedListener{ mp: MediaPlayer -> mp.isLooping = true }
         mediaControls = MediaController(this@WorkOutComplete)
         mediaControls.setAnchorView(videoView)
-        videoView.setMediaController(mediaControls)
+        //videoView.setMediaController(mediaControls)
         videoView.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.w1))
         videoView.start()
         videoView.setOnCompletionListener { mp: MediaPlayer? ->  // reserved
