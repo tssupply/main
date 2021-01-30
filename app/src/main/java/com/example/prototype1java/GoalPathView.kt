@@ -9,18 +9,18 @@ import android.util.AttributeSet
 import android.view.View
 import kotlin.math.max
 
-class ScorePathView : View {
+class GoalPathView : View {
     private var path: Path? = null
     private var paint: Paint? = null
     private var length = 0f
-    private var rect: RectF? = null
+    private var rect2: RectF? = null
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
     fun init() {
-        setScores()
+        setGoal()
         paint = Paint()
         setupLinePath()
         val measure = PathMeasure(path, false)
@@ -28,22 +28,22 @@ class ScorePathView : View {
         annimateScores()
     }
 
-    private fun setScores() {
-        rect = RectF(580.0f, 400f, 950f, 540f)
+    private fun setGoal() {
+        rect2 = RectF(480f, 370f, 1050f, 590f)
     }
 
     private fun annimateScores() {
-        ObjectAnimator.ofFloat(this@ScorePathView, "phase", 1.0f, 0.0f)
+        ObjectAnimator.ofFloat(this@GoalPathView, "phase", 1.0f, 0.0f)
                 .setDuration(8000)
                 .start()
-        ObjectAnimator.ofObject(this@ScorePathView, "color", ArgbEvaluator(), Color.WHITE, Color.WHITE, Color.WHITE)
+        ObjectAnimator.ofObject(this@GoalPathView, "color", ArgbEvaluator(), -0x100, Color.YELLOW, Color.YELLOW, Color.rgb(255, 165, 0))
                 .setDuration(8000)
                 .start()
     }
 
     private fun setupLinePath() {
         paint!!.color = Color.TRANSPARENT
-        paint!!.strokeWidth = 4f
+        paint!!.strokeWidth = 5f
         paint!!.style = Paint.Style.STROKE
         path = Path()
         path!!.moveTo(0f, 0f)
@@ -62,7 +62,7 @@ class ScorePathView : View {
 
     public override fun onDraw(c: Canvas) {
         super.onDraw(c)
-        rect?.let { c.drawOval(rect!!, paint!!)}
+        rect2?.let { c.drawOval(rect2!!, paint!!)}
     }
 
     companion object {

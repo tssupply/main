@@ -18,6 +18,7 @@ class WorkOutComplete : AppCompatActivity() {
     private lateinit var mediaControls: MediaController
     private lateinit var scoreView: TextView
     private lateinit var scorePathView: ScorePathView
+    private lateinit var goalPathView: GoalPathView
     private lateinit var toggleButton1: ToggleImageButton
     private var selectedToggle = 0
 
@@ -48,7 +49,9 @@ class WorkOutComplete : AppCompatActivity() {
 
     private fun configureScorePath() {
         scorePathView = findViewById(R.id.path)
+        goalPathView = findViewById(R.id.goal)
         scorePathView.init()
+        goalPathView.init()
     }
 
     private fun setUpCounter(): ValueAnimator {
