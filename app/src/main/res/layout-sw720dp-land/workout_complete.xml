@@ -10,7 +10,7 @@
     <FrameLayout
         android:id="@+id/frame_layout"
         android:background="#00ffffff"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="0dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="0dp">
@@ -21,24 +21,24 @@
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="-250dp"
+            android:layout_marginTop="-100dp"
             android:focusable="false"
             android:focusableInTouchMode="false" />
 
         <com.example.prototype1java.GoalPathView
             android:background="#00ffffff"
-            android:layout_marginStart="515dp"
+            android:layout_marginStart="250dp"
             android:layout_marginBottom="180dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:id="@+id/goal"
             android:layout_width="match_parent"
             android:layout_height="1300dp" />
 
         <com.example.prototype1java.ScorePathView
             android:background="#00ffffff"
-            android:layout_marginStart="515dp"
+            android:layout_marginStart="250dp"
             android:layout_marginBottom="180dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:id="@+id/path"
             android:layout_width="match_parent"
             android:layout_height="1300dp" />
@@ -46,13 +46,13 @@
 
         <TextView
             android:background="#00ffffff"
-            android:layout_marginTop="280dp"
-            android:layout_marginLeft="975dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginLeft="730dp"
             android:layout_width="wrap_content"
             android:layout_height="44dp"
             android:fontFamily="@font/lato_light"
             android:paddingEnd="10dp"
-            android:text="PERFORMANCE"
+            android:text="SCORE"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -60,13 +60,13 @@
 
         <TextView
             android:background="#00ffffff"
-            android:layout_marginTop="310dp"
-            android:layout_marginLeft="975dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginLeft="775dp"
             android:layout_width="wrap_content"
             android:layout_height="44dp"
             android:fontFamily="@font/lato_light"
             android:paddingEnd="10dp"
-            android:text="CONSISTENCY"
+            android:text="GOAL"
             android:textAlignment="viewStart"
             android:textColor="#FFC800"
             android:textSize="16sp"
@@ -81,10 +81,10 @@
             android:text="@string/workout_complete"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="82sp" />
+            android:textSize="52sp" />
 
         <LinearLayout
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:background="#00ffffff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                 android:text="@string/your_fitness_score_20"
                 android:textAlignment="viewEnd"
                 android:textColor="@color/white"
-                android:textSize="33sp"
+                android:textSize="13sp"
                 android:textStyle="bold"/>
 
             <TextView
@@ -118,7 +118,7 @@
                 android:text="@string/your_score_20"
                 android:textAlignment="viewEnd"
                 android:textColor="#ffcb49"
-                android:textSize="33sp"
+                android:textSize="13sp"
                 android:textStyle="bold"/>
         </LinearLayout>
         <TextView
@@ -126,31 +126,31 @@
             android:id="@+id/textinput_counter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="175dp"
+            android:layout_marginTop="95dp"
             android:fontFamily="@font/lato_light"
             android:text="@string/progressing"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="65sp" />
+            android:textSize="54sp" />
 
         <TextView
             android:background="#00ffffff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="765dp"
+            android:layout_marginTop="350dp"
             android:fontFamily="@font/lato_light"
             android:text="@string/how_do_you_feel_about_your_fitness_journey"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="44sp" />
+            android:textSize="29sp" />
 
     <LinearLayout
         android:background="#00ffffff"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="310dp"
-        android:layout_marginTop="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="155dp"
         android:layout_marginLeft="75dp"
         android:layout_marginRight="75dp">
 
@@ -159,24 +159,24 @@
             android:layout_marginTop="1dp"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:background="@drawable/discourage_button" />
 
         <com.example.prototype1java.ToggleImageButton
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
             android:id="@+id/bored_button"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:background="@drawable/bored_button" />
 
         <com.example.prototype1java.ToggleImageButton
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
             android:id="@+id/neutral_button"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:background="@drawable/neutral_button" />
 
         <com.example.prototype1java.ToggleImageButton
@@ -184,8 +184,8 @@
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
             android:id="@+id/motivated_button"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:background="@drawable/motivated_button" />
 
         <com.example.prototype1java.ToggleImageButton
@@ -193,16 +193,17 @@
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
             android:id="@+id/amazing_button"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:background="@drawable/amazing_button" />
     </LinearLayout>
-        <ImageButton
+dp        <ImageButton
             android:id="@+id/continue1"
-            android:layout_width="400dp"
-            android:layout_height="110dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="580dp"
+            android:layout_marginTop="330dp"
+            android:layout_marginBottom="50dp"
             android:background="@drawable/btncontinue"
             android:minWidth="350dp" />
     </FrameLayout>
