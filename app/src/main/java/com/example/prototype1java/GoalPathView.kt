@@ -9,30 +9,22 @@ import android.util.AttributeSet
 import android.view.View
 import kotlin.math.max
 
-class GoalPathView : View {
-    private var path: Path? = null
-    private var paint: Paint? = null
-    private var length = 0f
-    private var rect2: RectF? = null
+class GoalPathView : View, IGoalPathView {
+    override var path: Path? = null
+    override var paint: Paint? = null
+    override var length = 0f
+    override var rectangle: RectF? = null
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
-    fun init() {
-        setGoal()
-        paint = Paint()
-        setupLinePath()
-        val measure = PathMeasure(path, false)
-        length = measure.length
-        annimateScores()
+
+    override fun setGoal(rect: RectF) {
+        rectangle = rect //RectF(480f, 370f, 1050f, 590f)
     }
 
-    private fun setGoal() {
-        rect2 = RectF(480f, 370f, 1050f, 590f)
-    }
-
-    private fun annimateScores() {
+    override fun animateDraw() {
         ObjectAnimator.ofFloat(this@GoalPathView, "phase", 1.0f, 0.0f)
                 .setDuration(8000)
                 .start()
@@ -41,32 +33,23 @@ class GoalPathView : View {
                 .start()
     }
 
-    private fun setupLinePath() {
-        paint!!.color = Color.TRANSPARENT
-        paint!!.strokeWidth = 5f
-        paint!!.style = Paint.Style.STROKE
-        path = Path()
-        path!!.moveTo(0f, 0f)
-        path!!.lineTo(850f, 1200f)
-    }
-
-    fun setPhase(phase: Float) {
+    override fun setPhase(phase: Float) {
         paint!!.pathEffect = createPathEffect(length, phase, 0.0f)
         invalidate()
     }
 
-    fun setColor(color: Int) {
+    override fun setColor(color: Int) {
         paint!!.color = color
         invalidate()
     }
 
-    public override fun onDraw(c: Canvas) {
+    override fun onDraw(c: Canvas) {
         super.onDraw(c)
-        rect2?.let { c.drawOval(rect2!!, paint!!)}
+        rectangle?.let { c.drawOval(rectangle!!, paint!!)}
     }
 
     companion object {
-        private fun createPathEffect(pathLength: Float, phase: Float, offset: Float): PathEffect {
+        fun createPathEffect(pathLength: Float, phase: Float, offset: Float): PathEffect {
             return DashPathEffect(floatArrayOf(pathLength, pathLength),
                     max(phase * pathLength, offset))
         }

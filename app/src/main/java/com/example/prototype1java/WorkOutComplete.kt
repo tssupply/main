@@ -3,6 +3,7 @@ package com.example.prototype1java
 import android.animation.TypeEvaluator
 import android.animation.ValueAnimator
 import android.content.Intent
+import android.graphics.RectF
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
@@ -20,7 +21,7 @@ class WorkOutComplete : AppCompatActivity() {
     private lateinit var scorePathView: ScorePathView
     private lateinit var goalPathView: GoalPathView
     private lateinit var toggleButton1: ToggleImageButton
-    private var selectedToggle = 0
+    var selectedToggle = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +29,8 @@ class WorkOutComplete : AppCompatActivity() {
 
         configureScorePath()
         configureBackgroundVideo()
-        confiureScoreAnimation()
-        configureFeedbackToggleButtonss()
+        configureScoreAnimation()
+        configureFeedbackToggleButtons()
         configureNavigationToMyJourney()
     }
 
@@ -41,7 +42,7 @@ class WorkOutComplete : AppCompatActivity() {
         }
     }
 
-    private fun confiureScoreAnimation() {
+    private fun configureScoreAnimation() {
         val animator = setUpCounter()
         animator.duration = animationDuration
         animator.start()
@@ -50,8 +51,9 @@ class WorkOutComplete : AppCompatActivity() {
     private fun configureScorePath() {
         scorePathView = findViewById(R.id.path)
         goalPathView = findViewById(R.id.goal)
-        scorePathView.init()
-        goalPathView.init()
+
+        scorePathView.initPath(RectF(580.0f, 400f, 950f, 540f))
+        goalPathView.initPath(RectF(480f, 370f, 1050f, 590f))
     }
 
     private fun setUpCounter(): ValueAnimator {
@@ -63,40 +65,13 @@ class WorkOutComplete : AppCompatActivity() {
         return animator
     }
 
-    // evaluation prototype code WIP
+
     private fun configureBackgroundVideo() {
         videoView = findViewById(R.id.videoView)
         videoView.setOnPreparedListener{ mp: MediaPlayer -> mp.isLooping = true }
-        videoView.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.w1))
+        videoView.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.w1))   // evaluation prototype code WIP
         videoView.start()
         videoView.setOnErrorListener{ mp: MediaPlayer?, what: Int, extra: Int -> false }
-    }
-
-    private fun configureFeedbackToggleButtonss() {
-        toggleButton1 = findViewById(R.id.bored_button)
-        val boredButton = findViewById<ToggleImageButton>(R.id.bored_button)
-        val neutralButton = findViewById<ToggleImageButton>(R.id.neutral_button)
-        val amazingButton = findViewById<ToggleImageButton>(R.id.amazing_button)
-        val discourageButton = findViewById<ToggleImageButton>(R.id.discourage_button)
-        val motivatedButton = findViewById<ToggleImageButton>(R.id.motivated_button)
-
-        val clickListener = (object : ToggleImageButton.OnCheckedChangeListener {
-            override fun onCheckedChanged(buttonView: ToggleImageButton?, isChecked: Boolean) {
-                if (buttonView != null && isChecked) {
-                    selectedToggle = buttonView.id
-                    if (selectedToggle != boredButton.id) boredButton.isChecked = false
-                    if (selectedToggle != neutralButton.id) neutralButton.isChecked = false
-                    if (selectedToggle != amazingButton.id) amazingButton.isChecked = false
-                    if (selectedToggle != discourageButton.id) discourageButton.isChecked = false
-                    if (selectedToggle != motivatedButton.id) motivatedButton.isChecked = false
-                }
-            }
-        })
-        boredButton.onCheckedChangeListener = clickListener
-        neutralButton.onCheckedChangeListener = clickListener
-        amazingButton.onCheckedChangeListener = clickListener
-        discourageButton.onCheckedChangeListener = clickListener
-        motivatedButton.onCheckedChangeListener = clickListener
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -114,4 +89,30 @@ class WorkOutComplete : AppCompatActivity() {
     companion object{
      const val animationDuration = 6000L
     }
+}
+
+fun WorkOutComplete.configureFeedbackToggleButtons() {
+    val boredButton = findViewById<ToggleImageButton>(R.id.bored_button)
+    val neutralButton = findViewById<ToggleImageButton>(R.id.neutral_button)
+    val amazingButton = findViewById<ToggleImageButton>(R.id.amazing_button)
+    val discourageButton = findViewById<ToggleImageButton>(R.id.discourage_button)
+    val motivatedButton = findViewById<ToggleImageButton>(R.id.motivated_button)
+
+    val clickListener = (object : ToggleImageButton.OnCheckedChangeListener {
+        override fun onCheckedChanged(buttonView: ToggleImageButton?, isChecked: Boolean) {
+            if (buttonView != null && isChecked) {
+                selectedToggle = buttonView.id
+                if (selectedToggle != boredButton.id) boredButton.isChecked = false
+                if (selectedToggle != neutralButton.id) neutralButton.isChecked = false
+                if (selectedToggle != amazingButton.id) amazingButton.isChecked = false
+                if (selectedToggle != discourageButton.id) discourageButton.isChecked = false
+                if (selectedToggle != motivatedButton.id) motivatedButton.isChecked = false
+            }
+        }
+    })
+    boredButton.onCheckedChangeListener = clickListener
+    neutralButton.onCheckedChangeListener = clickListener
+    amazingButton.onCheckedChangeListener = clickListener
+    discourageButton.onCheckedChangeListener = clickListener
+    motivatedButton.onCheckedChangeListener = clickListener
 }
